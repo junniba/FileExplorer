@@ -1,11 +1,11 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
 
     defaultConfig {
-        applicationId "net.micode.fileexplorer"
+//        applicationId "net.micode.fileexplorer"
         minSdkVersion 14
         targetSdkVersion 30
     }

@@ -1,7 +1,6 @@
 
 package net.micode.fileexplorer;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -35,7 +34,7 @@ import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class FileCategoryActivity extends Fragment implements IFileInteractionListener,
+public class FileCategoryFragment extends Fragment implements IFileInteractionListener,
         FavoriteDatabaseListener, IBackPressedListener {
 
     public static final String EXT_FILETER_KEY = "ext_filter";
@@ -68,7 +67,7 @@ public class FileCategoryActivity extends Fragment implements IFileInteractionLi
 
     private View mRootView;
 
-    private FileViewActivity mFileViewActivity;
+    private FileViewFragment mFileViewActivity;
 
     private boolean mConfigurationChanged = false;
 
@@ -90,7 +89,7 @@ public class FileCategoryActivity extends Fragment implements IFileInteractionLi
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mActivity = (AppCompatActivity) getActivity();
-        mFileViewActivity = (FileViewActivity) ((FileExplorerTabActivity) mActivity)
+        mFileViewActivity = (FileViewFragment) ((FileExplorerTabActivity) mActivity)
                 .getFragment(Util.SDCARD_TAB_INDEX);
         mRootView = inflater.inflate(R.layout.file_explorer_category, container, false);
         curViewPage = ViewPage.Invalid;

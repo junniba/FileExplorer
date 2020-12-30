@@ -122,7 +122,7 @@ public class FavoriteList implements FavoriteDatabaseListener {
 
         if (favorite.fileInfo.IsDir) {
             FileExplorerTabActivity activity = (FileExplorerTabActivity) mContext;
-            ((FileViewActivity) activity.getFragment(Util.SDCARD_TAB_INDEX))
+            ((FileViewFragment) activity.getFragment(Util.SDCARD_TAB_INDEX))
                     .setPath(favorite.location);
             activity.getSupportActionBar().setSelectedNavigationItem(Util.SDCARD_TAB_INDEX);
         } else {

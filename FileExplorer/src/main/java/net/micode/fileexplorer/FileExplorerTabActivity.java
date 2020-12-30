@@ -56,11 +56,11 @@ public class FileExplorerTabActivity extends AppCompatActivity {
 
         mTabsAdapter = new TabsAdapter(this, mViewPager);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_category),
-                FileCategoryActivity.class, null);
+                FileCategoryFragment.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_sd),
-                FileViewActivity.class, null);
+                FileViewFragment.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_remote),
-                ServerControlActivity.class, null);
+                ServerControlFragment.class, null);
         bar.setSelectedNavigationItem(PreferenceManager.getDefaultSharedPreferences(this)
                 .getInt(INSTANCESTATE_TAB, Util.CATEGORY_TAB_INDEX));
     }
@@ -76,7 +76,7 @@ public class FileExplorerTabActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         if (getSupportActionBar().getSelectedNavigationIndex() == Util.CATEGORY_TAB_INDEX) {
-            FileCategoryActivity categoryFragement =(FileCategoryActivity) mTabsAdapter.getItem(Util.CATEGORY_TAB_INDEX);
+            FileCategoryFragment categoryFragement =(FileCategoryFragment) mTabsAdapter.getItem(Util.CATEGORY_TAB_INDEX);
             if (categoryFragement.isHomePage()) {
                 reInstantiateCategoryTab();
             } else {

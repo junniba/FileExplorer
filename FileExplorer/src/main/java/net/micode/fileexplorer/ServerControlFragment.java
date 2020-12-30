@@ -56,7 +56,7 @@ import androidx.fragment.app.Fragment;
 import java.io.File;
 import java.net.InetAddress;
 
-public class ServerControlActivity extends Fragment implements IBackPressedListener {
+public class ServerControlFragment extends Fragment implements IBackPressedListener {
 
     private TextView ipText;
 
@@ -87,7 +87,7 @@ public class ServerControlActivity extends Fragment implements IBackPressedListe
 
     private View mRootView;
 
-    public ServerControlActivity() {
+    public ServerControlFragment() {
     }
 
     @Override

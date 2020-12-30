@@ -47,7 +47,7 @@ import androidx.fragment.app.Fragment;
 import net.micode.fileexplorer.FileExplorerTabActivity.IBackPressedListener;
 import net.micode.fileexplorer.FileViewInteractionHub.Mode;
 
-public class FileViewActivity extends Fragment implements
+public class FileViewFragment extends Fragment implements
         IFileInteractionListener, IBackPressedListener {
 
     public static final String EXT_FILTER_KEY = "ext_filter";

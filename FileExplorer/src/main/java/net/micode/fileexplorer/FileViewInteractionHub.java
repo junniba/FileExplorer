@@ -59,7 +59,7 @@ import android.widget.Toast;
 import net.micode.fileexplorer.FileListItem.ModeCallback;
 import net.micode.fileexplorer.FileOperationHelper.IOperationProgressListener;
 import net.micode.fileexplorer.FileSortHelper.SortMethod;
-import net.micode.fileexplorer.FileViewActivity.SelectFilesCallback;
+import net.micode.fileexplorer.FileViewFragment.SelectFilesCallback;
 import net.micode.fileexplorer.TextInputDialog.OnFinishListener;
 
 public class FileViewInteractionHub implements IOperationProgressListener {
